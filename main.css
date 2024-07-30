@@ -11,12 +11,33 @@ body{
     background: #E3F2FD;
 }
 
+#container {
+    display: flex;
+    margin: 20px 35px;
+}
+
+#container h1, h2 {
+    text-align: center;
+}
+
 .dropdowns{
-    /* width: 800px; */
+    width: 800px;
     margin: 0px auto;
     padding-top: 20px;
-    display: flex;
+    flex: 1;
     justify-content: space-around;
+}
+
+label, span {
+    flex: 1;
+}
+
+input {
+    margin: 0 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 2px 5px;
+    width: 400px;
 }
 
 .dropdowns .select-menu {
@@ -29,7 +50,7 @@ body{
     height: 55px;
     background: #fff;
     padding: 20px;
-    font-size: 18px;
+    font-size: .7rem;
     font-weight: 400;
     border-radius: 8px;
     align-items: center;
@@ -56,9 +77,9 @@ body{
 .select-menu.active .options{
     display: block;
 }
-.options .option{
+.options .option {
     display: flex;
-    height: 55px;
+    height: 28px;
     cursor: pointer;
     padding: 0 16px;
     border-radius: 8px;
@@ -72,8 +93,8 @@ body{
     font-size: 25px;
     margin-right: 12px;
 }
-.option .option-text{
-    font-size: 18px;
+.option .option-text {
+    font-size: 12px;
     color: #333;
 }
 
@@ -88,7 +109,7 @@ body{
     margin: 0 auto;
     top: 70%;
     left: 40%;
-    position: absolute;
+    /* position: absolute; */
 }
 
 .container {
@@ -128,7 +149,44 @@ body{
     color: #c6dbf6;
 }
 
-.result {
-    margin-top: 20px;
-    font-size: 16px;
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 3px;
+    width: 80%;
+    max-width: 1150px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#name-list {
+    list-style-type: none;
+    padding: 0;
 }
