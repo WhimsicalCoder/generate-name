@@ -3,7 +3,7 @@ let campaignNames = [];
 function generateCName() {
     const accountClient = document.getElementById('account-client').innerText;
     const campaignCandidate = document.getElementById('campaign-candidate').value;
-    const state = document.getElementById('state').innerText.replace(/[A-Z][A-Z]\s+:\s/g, '');
+    const state = document.getElementById('state').value;
     const office = document.getElementById('office').value;
     const aedmsSdems = document.getElementById('aedms-sdems').value;
     const startDate = document.getElementById('start-date').value;
@@ -44,7 +44,7 @@ function resetCForm() {
 function generateAdGroupName() {
     const accountClientAd = document.getElementById('account-client-ad').innerText;
     const campaignCandidateAd = document.getElementById('campaign-candidate-ad').value;
-    const stateAd = document.getElementById('state-ad').innerText.replace(/[A-Z][A-Z]\s+:\s/g, '');
+    const stateAd = document.getElementById('state-ad').value;
     const district = document.getElementById('district').value;
     const startDateAd = document.getElementById('start-date-ad').value;
     const endDateAd = document.getElementById('end-date-ad').value;
